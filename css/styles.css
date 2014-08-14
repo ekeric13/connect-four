@@ -1,0 +1,14 @@
+.board {
+  position: absolute;
+  left:0px;
+  top:0px;
+
+
+}
+
+#myCanvas {
+  position: absolute;
+  left:0px;
+  top:0px;
+}
+
