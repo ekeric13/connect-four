@@ -104,30 +104,44 @@ var movePlayer = function(event) {
     case 49:
     move(".column1");
     board.add_piece(0, player);
+    dontListenForKeys();
+    resetListenForKeys();
     break;
     case 50:
     move(".column2");
     board.add_piece(1, player);
+    dontListenForKeys();
+    resetListenForKeys();
     break;
     case 51:
     move(".column3");
     board.add_piece(2, player);
+    dontListenForKeys();
+    resetListenForKeys();
     break;
     case 52:
     move(".column4");
     board.add_piece(3, player);
+    dontListenForKeys();
+    resetListenForKeys();
     break;
     case 53:
     move(".column5");
     board.add_piece(4, player);
+    dontListenForKeys();
+    resetListenForKeys();
     break;
     case 54:
     move(".column6");
     board.add_piece(5, player);
+    dontListenForKeys();
+    resetListenForKeys();
     break;
     case 55:
     move(".column7");
     board.add_piece(6, player);
+    dontListenForKeys();
+    resetListenForKeys();
     break;
     default:
       console.log("fail");
@@ -136,12 +150,29 @@ var movePlayer = function(event) {
 
 }
 
+var playMusic = function() {
+  $("audio")[0].play();
+}
 var counter = 0
 var listenForKeys = function(){
 
-  document.addEventListener("keyup", movePlayer);
-  $("audio")[0].play();
+  $(document).on("keyup", movePlayer);
+
   console.log("is this here?")
 
 }
+
+var dontListenForKeys = function(){
+
+  $(document).off("keyup", movePlayer);
+
+  console.log("is this here?")
+
+}
+
+var resetListenForKeys = function(){
+  setTimeout(listenForKeys,1250);
+}
+
 listenForKeys();
+playMusic();
