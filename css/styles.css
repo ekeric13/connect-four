@@ -1,14 +1,39 @@
-.board {
-  position: absolute;
-  left:0px;
-  top:0px;
-
-
+body{
+  background-color: #B8B8B8;
 }
 
-#myCanvas {
-  position: absolute;
-  left:0px;
-  top:0px;
+h1 {
+  font-family: Comic Sans, Comic Sans MS, cursive;
+  text-align: center;
+  font-size: 80px;
+  color: #FFFFFF;
 }
 
+#connect4 {
+  background-color: #1975FF;
+  border-spacing: 15px;
+  border-radius: 15px;
+  height: 600px;
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+td {
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.active1 {
+  background-color: #FF9900;
+}
+
+.active2 {
+  background-color: #FF3300;
+}
+
+#timer {
+  text-align: center;
+}
