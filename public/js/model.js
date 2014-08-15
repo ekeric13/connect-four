@@ -69,8 +69,12 @@ Board.prototype.checkWin = function (x,y,player){
   win = win || this.checkPDiag(x,y);
   win = win || this.checkNDiag(x,y);
   if(win){
-    alert("PLAYER" + player +", YOU WIN! Congratulations, You're the best blah blah trumpets and stuff.");
-    window.location.reload();
+    alert_win = function() {
+      alert("PLAYER" + player +", YOU WIN! Congratulations, You're the best blah blah trumpets and stuff.");
+      window.location.reload();
+    }
+    setTimeout(alert_win, 1000);
+
     // return (player);  This is the thing when we are passed in win.
     //return (win);
   }
