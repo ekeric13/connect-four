@@ -16,7 +16,32 @@ var move = function(columnNumber) {
       if (!$(column1[i]).hasClass("active1") && !$(column1[i]).hasClass("active2")) {
 
         if (counter % 2 === 0  )  {
-          $(column1[i]).addClass("active1" )
+          $(column1[i-5]).addClass("active1" ).animate({opacity: 1},100, function(){
+            $(column1[i-5]).removeClass("active1" )
+          });
+          $(column1[i-4]).animate({opacity: .95},100, function(){
+            $(column1[i-4]).addClass("active1" ).animate({opacity: 1},100, function(){
+            $(column1[i-4]).removeClass("active1" )
+          });
+          });
+          $(column1[i-3]).animate({opacity: .95},200, function(){
+            $(column1[i-3]).addClass("active1" ).animate({opacity: 1},100, function(){
+            $(column1[i-3]).removeClass("active1" )
+          });
+          });
+          $(column1[i-2]).animate({opacity: .95},300, function(){
+            $(column1[i-2]).addClass("active1" ).animate({opacity: 1},100, function(){
+            $(column1[i-2]).removeClass("active1" )
+          });
+          });
+          $(column1[i-1]).animate({opacity: .95},400, function(){
+            $(column1[i-1]).addClass("active1" ).animate({opacity: 1},100, function(){
+            $(column1[i-1]).removeClass("active1" )
+          });
+          });
+          $(column1[i]).animate( {opacity: 1},500, "easeOutBounce", function(){
+            $(column1[i]).addClass("active1" )
+          })
             break;
         }
         else {
