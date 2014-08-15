@@ -32,3 +32,33 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+
+
+.bundle
+.DS_Store
+config/database.yml
+db/*.sqlite3
+db/*.sqlite
+db/*.sqlite3-journal
+log/*.log
+tmp/
+.sass-cache/
+.DS_store
+coverage
+doc/api
+doc/app
+curriculum/.pygments-cache
+curriculum/public/*
+public/assets
+*.tmproj
+*~
+\#*#
+.idea/
+ignored/
+.irb-save-history
+chromedriver.log
+.tddium*
+bin/
+.env
+*.swp
