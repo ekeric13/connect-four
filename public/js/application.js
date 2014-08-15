@@ -95,36 +95,45 @@ var move = function(columnNumber) {
 }
 
 var movePlayer = function(event) {
+  player = counter%2 + 1;
+  counter += 1;
   // check even and odd number of key presses.
 
   var keyCode = event.keyCode;
   switch(keyCode) {
     case 49:
     move(".column1");
+    board.add_piece(0, player);
     break;
     case 50:
     move(".column2");
+    board.add_piece(1, player);
     break;
     case 51:
     move(".column3");
+    board.add_piece(2, player);
     break;
     case 52:
     move(".column4");
+    board.add_piece(3, player);
     break;
     case 53:
     move(".column5");
+    board.add_piece(4, player);
     break;
     case 54:
     move(".column6");
+    board.add_piece(5, player);
     break;
     case 55:
     move(".column7");
+    board.add_piece(6, player);
     break;
     default:
       console.log("fail");
     break;
   }
-  counter += 1;
+
 }
 
 var counter = 0
