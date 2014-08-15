@@ -39,8 +39,16 @@ var move = function(columnNumber) {
             $(column1[i-1]).removeClass("active1" )
           });
           });
-          $(column1[i]).animate( {opacity: 1},500, "easeOutBounce", function(){
+          $(column1[i]).animate( {opacity: 1},500, function(){
+            $(column1[i]).addClass("active1" ).animate({opacity: 1},100, function(){
+            $(column1[i]).removeClass("active1" ).animate({opacity: .95},50, function(){
+            $(column1[i-1]).addClass("active1" ).animate({opacity: 1},100, function(){
+            $(column1[i-1]).removeClass("active1" ).animate( {opacity: 1},50, function(){
             $(column1[i]).addClass("active1" )
+            });
+          });
+          });
+          });
           })
             break;
         }
