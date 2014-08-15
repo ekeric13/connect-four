@@ -131,6 +131,7 @@ var counter = 0
 var listenForKeys = function(){
 
   document.addEventListener("keyup", movePlayer);
+  $("audio")[0].play();
   console.log("is this here?")
 
 }
