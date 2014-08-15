@@ -23,13 +23,14 @@ Board.prototype.checkColFull = function(x_coor){
   return false;
 };
 
-// Board.prototype.checkFull = function(){
-//   for(var i=0; i<7; i++){
-//     if (!this.checkColFull(i))
-//       return false;
-//     return true;
-//   }
-// };
+Board.prototype.checkFull = function(){
+  for(var i=0; i<7; i++){
+    if (!this.checkColFull(i))
+      return false;
+  }
+  return true;
+};
+
 Board.prototype.add_piece = function(x_coor,player){
   if (this.checkColFull(x_coor)){
     return -1;
@@ -43,7 +44,11 @@ Board.prototype.add_piece = function(x_coor,player){
       break;
     }
   }
-  return this.checkWin(x_coor,y,player);
+  this.checkWin(x_coor,y,player);
+  if (this.checkFull()){
+    alert("TIE GAME");
+    window.location.reload();
+  }
 };
 
 
